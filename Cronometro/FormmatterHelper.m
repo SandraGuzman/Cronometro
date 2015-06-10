@@ -72,10 +72,9 @@
     NSInteger hour = [components hour];
     NSInteger minute = [components minute];
     NSInteger second = [components second];
-    NSLog(@"%d %d %d", hour, minute, second);
     
-    int seconds = hour * 3600;
-    seconds += minute * 60;
+    int seconds = (int)(hour * 3600);
+    seconds += (int)(minute * 60);
     seconds += second;
     
     return seconds;

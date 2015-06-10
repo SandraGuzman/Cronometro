@@ -52,6 +52,8 @@
     [self getPercentajesWithTotal:[FormmatterHelper convertDateToSeconds:currentDate]];
     currentFormatDate = [FormmatterHelper getDateFormat:currentDate];
     self.displayTimer.text = [FormmatterHelper convertDateToString:currentDate withFormat:currentFormatDate];
+    
+    NSLog(@"fecha : %@", self.displayTimer.text);
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(updateTimer)
@@ -63,11 +65,13 @@
     [self runGlowEffect];
     NSDate *myDate = [FormmatterHelper convertStringToDate:self.displayTimer.text withFormat:currentFormatDate];
     NSDate *correctDate = [NSDate dateWithTimeInterval:-1.0 sinceDate:myDate];
-    self.displayTimer.text = [FormmatterHelper convertDateToString:correctDate withFormat:currentFormatDate];
+    NSString *format =  [FormmatterHelper getDateFormat:correctDate];
+    
+    self.displayTimer.text = [FormmatterHelper convertDateToString:correctDate withFormat:format];
+    currentFormatDate = format;
     [self runBackgroundEffectWithPercent:[currentDate timeIntervalSinceDate:correctDate]];
     
-    NSComparisonResult result = [correctDate compare: [FormmatterHelper convertStringToDate:TYPEDEFS_DEFAULTTIME withFormat:TYPEDEFS_FULLTIME]];
-    
+    NSComparisonResult result = [correctDate compare: [FormmatterHelper convertStringToDate:TYPEDEFS_DEFAULTTIME withFormat:TYPEDEFS_TIMESS]];
     if(result == NSOrderedSame) {
         [self btnRestart:nil];
     }
@@ -79,18 +83,18 @@
 }
 
 - (void)resetVariables {
-    self.displayTimer.text = [[FormmatterHelper initializeNSDateFormat:currentFormatDate] stringFromDate:
-                              [FormmatterHelper convertStringToDate:TYPEDEFS_DEFAULTTIME withFormat:TYPEDEFS_FULLTIME]];
-    [FeedUserDefaults setTimer:[FeedUserDefaults timerTemporary]];
-    currentDate = [NSDate alloc];
-    flagGreen = 0;
-    flagRed = 0;
+    [self stopTimerController];
+    self.displayTimer.text = TYPEDEFS_DEFAULTTIME;
     self.displayTimer.layer.shadowColor = [[UIColor yellowColor] CGColor];
+    currentFormatDate = TYPEDEFS_FULLTIME;
+    
+    [FeedUserDefaults setTimer:[FeedUserDefaults timerTemporary]];
     self.mainView.backgroundColor = [UIColor blackColor];
     self.displayTimer.textColor = [UIColor redColor];
     
-    [self stopTimerController];
     [self.buttonStart setTitle:NSLocalizedString(@"Start", @"") forState:UIControlStateNormal];
+    flagGreen = 0;
+    flagRed = 0;
 }
 
 

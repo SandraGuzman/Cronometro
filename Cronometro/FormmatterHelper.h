@@ -16,4 +16,5 @@
 + (NSString *)getDateFormat:(NSDate *)date;
 + (NSDateFormatter *)initializeNSDateFormat:(NSString *)format;
 + (int)convertDateToSeconds:(NSDate *)date;
+
 @end
