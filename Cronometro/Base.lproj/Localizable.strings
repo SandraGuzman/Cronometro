@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Cronometro
+
+  Created by Sandra Guzmán Bautista on 04/06/15.
+  Copyright (c) 2015 onikom. All rights reserved.
+*/
+
+// StopWatch
+
+"Pause"             = "Pause";
+"Start"             = "Start";
+"Alert"             = "Alert";
+"Ok"                = "Close";
+"PleaseConfigure"   = "Please configure your connection";
+
+// Settings
+
+"SuccessfulConnection" = "Successful";
+"ServerNotFound"       = "Not connected";
+"Connecting"           = "Connecting ...";
+"SuccessfulLog"        = "Successful server connection";
+"NewDevice"            = "New device connected";
+"PleaseFormat"         = "Incorrect date format \n Hours-Minutes-Seconds";
+
+// Help
+
+"Label1" = "Connecting devices to the same network and click on the button configurations";
+"Label2" = "Connect the first device as a server, click on Startup Connection";
+"Label3" = "Show QRCode - Connectivity Status ";
+"Label4" = "Connect device as a client, click on Startup Connection and Scan QR Code Server with WebCam";
+"Label5" = "Show Connectivity Status";
+"Label6" = "Log server display current connections ";
+"Label7" = "Only server display start, done and pause buttons";

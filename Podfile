@@ -1,0 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
+pod 'ZBarSDK', '~> 1.2.2'
+pod 'ZXingObjC', '~> 3.0'
+pod 'DACircularProgress', '~> 2.2.0'

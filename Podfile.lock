@@ -1,0 +1,18 @@
+PODS:
+  - DACircularProgress (2.2.0)
+  - ZBarSDK (1.2.2)
+  - ZXingObjC (3.1.0):
+    - ZXingObjC/All (= 3.1.0)
+  - ZXingObjC/All (3.1.0)
+
+DEPENDENCIES:
+  - DACircularProgress (~> 2.2.0)
+  - ZBarSDK (~> 1.2.2)
+  - ZXingObjC (~> 3.0)
+
+SPEC CHECKSUMS:
+  DACircularProgress: 0f92b77239d5f3c612fc66185e2998391ac8e054
+  ZBarSDK: d60ce54c2d66e82131bfb51c83b102bf6aa0cf4e
+  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
+
+COCOAPODS: 0.37.2

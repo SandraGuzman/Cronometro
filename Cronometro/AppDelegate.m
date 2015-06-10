@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FeedUserDefaults.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self clearNSUserDefaults];
     return YES;
 }
 
@@ -40,6 +42,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)clearNSUserDefaults {
+    [FeedUserDefaults setIsConnected:NO];
+    [FeedUserDefaults setIsServer:YES];
+    [FeedUserDefaults setUrlServer:FEEDUSERDEFAULTS_URLSERVER];
+    [FeedUserDefaults setTimer:FEEDUSERDEFAULTS_TIMER];
+    [FeedUserDefaults setTimerTemporary:FEEDUSERDEFAULTS_TIMERTEMPORARY];
+    [FeedUserDefaults setLogData:nil];
 }
 
 @end

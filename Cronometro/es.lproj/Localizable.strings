@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  Cronometro
+
+  Created by Sandra Guzmán Bautista on 04/06/15.
+  Copyright (c) 2015 onikom. All rights reserved.
+*/
+
+// StopWatch
+
+"Pause"             = "Pausar";
+"Start"             = "Iniciar";
+"Alert"             = "Aviso";
+"Ok"                = "Cerrar";
+"PleaseConfigure"   = "Porfavor configurar su conexión";
+
+// Settings
+
+"SuccessfulConnection" = "Conectado";
+"ServerNotFound"       = "No Conectado";
+"Connecting"           = "Conectando ...";
+"SuccessfulLog"        = "Conexión exitosa";
+"NewDevice"            = "Nuevo dispositivo conectado";
+"PleaseFormat"         = "Formato incorrecto de fecha \n Horas-Minutos-Segundos";
+
+
+// Help
+
+"Label1" = "Conectar dispositivos a la misma red y dar clic en el botón configuraciones";
+"Label2" = "Conectar el primer dispositivo como servidor dar clic en Inicializar conexión";
+"Label3" = "Se mostrará QRCode y estatus de la conexión";
+"Label4" = "Los demás dispositivos se configurarán como clientes, clic en Inicializar conexión y escanear el QRCode del servidor";
+"Label5" = "Mostrará el estatus de la conexión";
+"Label6" = "EL servidor mostrará las conexiones existentes";
+"Label7" = "Solo el servidor mostrará los botones de inicio, pausar y reiniciar";

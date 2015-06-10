@@ -1,0 +1,54 @@
+
+/* Class = "IBUITextField"; placeholder = "00"; ObjectID = "7Jz-cc-uds"; */
+"7Jz-cc-uds.placeholder" = "00";
+
+/* Class = "IBUITextField"; text = "15"; ObjectID = "7Jz-cc-uds"; */
+"7Jz-cc-uds.text" = "15";
+
+/* Class = "IBUILabel"; text = ":"; ObjectID = "9QL-NR-KPK"; */
+"9QL-NR-KPK.text" = ":";
+
+/* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "Ew3-lf-Vf8"; */
+"Ew3-lf-Vf8.normalTitle" = "Inicializar conexión";
+
+/* Class = "IBUIButton"; normalTitle = "Minimizar"; ObjectID = "Fsp-3n-NTP"; */
+"Fsp-3n-NTP.normalTitle" = "Minimizar";
+
+/* Class = "IBUILabel"; text = ":"; ObjectID = "MlM-ld-4wn"; */
+"MlM-ld-4wn.text" = ":";
+
+/* Class = "IBUILabel"; text = "No conectado"; ObjectID = "TxS-T2-NNI"; */
+"TxS-T2-NNI.text" = "No conectado";
+
+/* Class = "IBUILabel"; text = "   Consola Servidor"; ObjectID = "WEQ-WW-0r3"; */
+"WEQ-WW-0r3.text" = "   Consola Servidor";
+
+/* Class = "IBUIButton"; normalTitle = "Reiniciar"; ObjectID = "bAM-nr-IPX"; */
+"bAM-nr-IPX.normalTitle" = "Reiniciar";
+
+/* Class = "IBUISegmentedControl"; fUg-Qj-XcK.segmentTitles[0] = "Servidor"; ObjectID = "fUg-Qj-XcK"; */
+"fUg-Qj-XcK.segmentTitles[0]" = "Servidor";
+
+/* Class = "IBUISegmentedControl"; fUg-Qj-XcK.segmentTitles[1] = "Cliente"; ObjectID = "fUg-Qj-XcK"; */
+"fUg-Qj-XcK.segmentTitles[1]" = "Cliente";
+
+/* Class = "IBUITextField"; placeholder = "00"; ObjectID = "iHf-OK-Nvb"; */
+"iHf-OK-Nvb.placeholder" = "00";
+
+/* Class = "IBUITextField"; text = "01"; ObjectID = "iHf-OK-Nvb"; */
+"iHf-OK-Nvb.text" = "01";
+
+/* Class = "IBUITextField"; placeholder = "00"; ObjectID = "rcM-TM-L7u"; */
+"rcM-TM-L7u.placeholder" = "00";
+
+/* Class = "IBUITextField"; text = "10"; ObjectID = "rcM-TM-L7u"; */
+"rcM-TM-L7u.text" = "10";
+
+/* Class = "IBUILabel"; text = "Tiempo temporizador"; ObjectID = "tNX-mf-f8G"; */
+"tNX-mf-f8G.text" = "Tiempo temporizador";
+
+/* Class = "IBUIButton"; normalTitle = "Iniciar"; ObjectID = "u4j-Wa-cf6"; */
+"u4j-Wa-cf6.normalTitle" = "Iniciar";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "z83-qc-kGi"; */
+"z83-qc-kGi.text" = "Label";
