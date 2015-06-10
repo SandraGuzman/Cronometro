@@ -24,7 +24,8 @@
     self.displayTimer.layer.shadowColor = [[UIColor yellowColor] CGColor];
     self.displayTimer.layer.shadowRadius = 0.0f;
     self.displayTimer.layer.shadowOpacity = 10.0f;
-    [self.displayTimer setFont:[UIFont fontWithName:@"Digital-7" size:250.0f]];
+    [self.displayTimer setFont:[UIFont fontWithName:@"Digital-7" size:self.displayTimer.font.pointSize]];
+    
     [self showControls];
     
     self.streamServer = [StreamServer sharedInstance];

@@ -172,7 +172,7 @@
                            effectiveCrop.size.width * size.width,
                            effectiveCrop.size.height * size.height);
 
-    int nsyms = [scanner scanImage: zimg];
+    int nsyms = (int)[scanner scanImage: zimg];
     zlog(@"scan image: %@ crop=%@ nsyms=%d",
          NSStringFromCGSize(size), NSStringFromCGRect(zimg.crop), nsyms);
     [zimg release];

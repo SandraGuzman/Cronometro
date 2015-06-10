@@ -30,6 +30,7 @@
 		AEE07DB11B2115F600EC6828 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEE07DB31B2115F600EC6828 /* Localizable.strings */; };
 		AEEA4B8E1B1E556D0049051A /* FormmatterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEA4B8D1B1E556D0049051A /* FormmatterHelper.m */; };
 		AEEA4B911B1E73790049051A /* FeedUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEA4B901B1E73790049051A /* FeedUserDefaults.m */; };
+		AEF076621B28EBBD004CCA65 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF076601B28EBBD004CCA65 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,9 @@
 		AEEA4B8D1B1E556D0049051A /* FormmatterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormmatterHelper.m; sourceTree = "<group>"; };
 		AEEA4B8F1B1E73790049051A /* FeedUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedUserDefaults.h; sourceTree = "<group>"; };
 		AEEA4B901B1E73790049051A /* FeedUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedUserDefaults.m; sourceTree = "<group>"; };
+		AEF076611B28EBBD004CCA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone.storyboard; sourceTree = "<group>"; };
+		AEF076661B28EBF8004CCA65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/iPhone.strings; sourceTree = "<group>"; };
+		AEF076681B28EDA2004CCA65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/iPhone.strings; sourceTree = "<group>"; };
 		B38F39C692850070CE084C32 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C981A5AAC4BBEC34B887F854 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,9 +160,8 @@
 		AE7D0E091B1CCBF80061C086 /* Cronometro */ = {
 			isa = PBXGroup;
 			children = (
+				AEF076521B28E8D7004CCA65 /* StoryBoards */,
 				AE7D0E171B1CCBF80061C086 /* Images.xcassets */,
-				AE7D0E191B1CCBF80061C086 /* LaunchScreen.xib */,
-				AE7D0E141B1CCBF80061C086 /* Main.storyboard */,
 				AE7D0E0E1B1CCBF80061C086 /* AppDelegate.h */,
 				AE7D0E0F1B1CCBF80061C086 /* AppDelegate.m */,
 				AE7D0E111B1CCBF80061C086 /* StopwatchController.h */,
@@ -229,6 +232,16 @@
 				AEEA4B901B1E73790049051A /* FeedUserDefaults.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		AEF076521B28E8D7004CCA65 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				AEF076601B28EBBD004CCA65 /* iPhone.storyboard */,
+				AE7D0E141B1CCBF80061C086 /* Main.storyboard */,
+				AE7D0E191B1CCBF80061C086 /* LaunchScreen.xib */,
+			);
+			name = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE07DB11B2115F600EC6828 /* Localizable.strings in Resources */,
+				AEF076621B28EBBD004CCA65 /* iPhone.storyboard in Resources */,
 				AE7D0E161B1CCBF80061C086 /* Main.storyboard in Resources */,
 				AE7D0E1B1B1CCBF80061C086 /* LaunchScreen.xib in Resources */,
 				AE7D0E181B1CCBF80061C086 /* Images.xcassets in Resources */,
@@ -432,6 +446,16 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		AEF076601B28EBBD004CCA65 /* iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEF076611B28EBBD004CCA65 /* Base */,
+				AEF076661B28EBF8004CCA65 /* es */,
+				AEF076681B28EDA2004CCA65 /* en */,
+			);
+			name = iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -527,7 +551,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Cronometro;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -541,7 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Cronometro;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

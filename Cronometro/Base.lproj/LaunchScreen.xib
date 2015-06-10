@@ -12,19 +12,40 @@
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 onikom. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
                     <rect key="frame" x="20" y="727" width="985" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="dGV-qA-ynh"/>
+                        <constraint firstAttribute="width" constant="985" id="kCg-3S-8z3"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Onikom" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-Qv-X5m">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onikom" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-Qv-X5m">
                     <rect key="frame" x="382" y="282" width="261" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="YGu-qP-lrd"/>
+                        <constraint firstAttribute="width" constant="261" id="kXB-D1-Ge2"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="YGu-qP-lrd"/>
+                            <exclude reference="kXB-D1-Ge2"/>
+                        </mask>
+                    </variation>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="19" id="1j9-sE-8ub"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="rAE-Qv-X5m" secondAttribute="bottom" constant="373" id="3Ua-x2-8US"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
+                <constraint firstItem="rAE-Qv-X5m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="282" id="UbJ-KV-v9R"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
+                <constraint firstAttribute="trailing" secondItem="rAE-Qv-X5m" secondAttribute="trailing" constant="381" id="nL0-jD-6UF"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="s3e-fN-Tvg"/>
+                <constraint firstItem="rAE-Qv-X5m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="382" id="t9U-qY-O0g"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="wna-q1-M2n"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

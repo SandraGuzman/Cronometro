@@ -40,10 +40,10 @@
     int x = 0;
     
     for (int i=0; i < imagesSettings.count; i++) {
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(x, 0, 650, 370)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(x, 0, self.slider.frame.size.width, self.slider.frame.size.height)];
         view.backgroundColor = [UIColor clearColor];
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame: CGRectMake(83, 3, 485, 365)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame: CGRectMake(25, 0.5f, self.slider.frame.size.width - 50, self.slider.frame.size.height - 1)];
         [imageView setImage: [UIImage imageNamed:imagesSettings[i]]];
         [view addSubview: imageView];
         

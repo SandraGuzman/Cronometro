@@ -1,0 +1,39 @@
+
+/* Class = "IBUILabel"; text = "Log Server"; ObjectID = "Drs-wn-KJh"; */
+"Drs-wn-KJh.text" = "Log Server";
+
+/* Class = "IBUITextField"; text = "15"; ObjectID = "HZW-Es-de2"; */
+"HZW-Es-de2.text" = "15";
+
+/* Class = "IBUIButton"; normalTitle = "Start"; ObjectID = "KNX-nn-beF"; */
+"KNX-nn-beF.normalTitle" = "Start";
+
+/* Class = "IBUITextField"; text = "10"; ObjectID = "O1d-iT-Jxv"; */
+"O1d-iT-Jxv.text" = "10";
+
+/* Class = "IBUILabel"; text = ":"; ObjectID = "Ora-Sw-wiJ"; */
+"Ora-Sw-wiJ.text" = ":";
+
+/* Class = "IBUILabel"; text = "00"; ObjectID = "ZMv-pq-rxB"; */
+"ZMv-pq-rxB.text" = "00";
+
+/* Class = "IBUILabel"; text = ":"; ObjectID = "jx2-jS-mJQ"; */
+"jx2-jS-mJQ.text" = ":";
+
+/* Class = "IBUISegmentedControl"; rVP-Al-cTf.segmentTitles[0] = "Server"; ObjectID = "rVP-Al-cTf"; */
+"rVP-Al-cTf.segmentTitles[0]" = "Server";
+
+/* Class = "IBUISegmentedControl"; rVP-Al-cTf.segmentTitles[1] = "Client"; ObjectID = "rVP-Al-cTf"; */
+"rVP-Al-cTf.segmentTitles[1]" = "Client";
+
+/* Class = "IBUIButton"; normalTitle = "Startup Connection"; ObjectID = "uh5-Xm-YaP"; */
+"uh5-Xm-YaP.normalTitle" = "Startup Connection";
+
+/* Class = "IBUILabel"; text = "Not connected"; ObjectID = "wGe-7s-qBw"; */
+"wGe-7s-qBw.text" = "Not connected";
+
+/* Class = "IBUIButton"; normalTitle = "Done"; ObjectID = "xAM-02-A3f"; */
+"xAM-02-A3f.normalTitle" = "Done";
+
+/* Class = "IBUITextField"; text = "01"; ObjectID = "yS8-gu-Imq"; */
+"yS8-gu-Imq.text" = "01";
