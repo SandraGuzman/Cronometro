@@ -28,6 +28,13 @@
 		AE7D0E441B1CD2DC0061C086 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7D0E431B1CD2DC0061C086 /* UIKit.framework */; };
 		AE7D0E471B1CF5170061C086 /* StreamClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7D0E461B1CF5170061C086 /* StreamClient.m */; };
 		AEE07DB11B2115F600EC6828 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEE07DB31B2115F600EC6828 /* Localizable.strings */; };
+		AEE1E7B51B2A16250038B1DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE1E7B41B2A16250038B1DB /* AudioToolbox.framework */; };
+		AEE1E7B71B2A25180038B1DB /* boathorn.wav in Resources */ = {isa = PBXBuildFile; fileRef = AEE1E7B61B2A25180038B1DB /* boathorn.wav */; };
+		AEE1E7B91B2A459F0038B1DB /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = AEE1E7B81B2A459F0038B1DB /* clock.wav */; };
+		AEE1E7BB1B2A4B3B0038B1DB /* clock2.wav in Resources */ = {isa = PBXBuildFile; fileRef = AEE1E7BA1B2A4B3B0038B1DB /* clock2.wav */; };
+		AEE1E7BD1B2A4E940038B1DB /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEE1E7BC1B2A4E940038B1DB /* beep.mp3 */; };
+		AEE1E7C11B2A54FD0038B1DB /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = AEE1E7C01B2A54FD0038B1DB /* fail.wav */; };
+		AEE90AE61B2B4B7A008F3178 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEE90AE81B2B4B7A008F3178 /* InfoPlist.strings */; };
 		AEEA4B8E1B1E556D0049051A /* FormmatterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEA4B8D1B1E556D0049051A /* FormmatterHelper.m */; };
 		AEEA4B911B1E73790049051A /* FeedUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEA4B901B1E73790049051A /* FeedUserDefaults.m */; };
 		AEF076621B28EBBD004CCA65 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF076601B28EBBD004CCA65 /* iPhone.storyboard */; };
@@ -82,6 +89,15 @@
 		AEE07DB21B2115F600EC6828 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AEE07DB41B2115FC00EC6828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AEE07DB51B21160000EC6828 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AEE1E7B41B2A16250038B1DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AEE1E7B61B2A25180038B1DB /* boathorn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = boathorn.wav; path = ../Cronometro/boathorn.wav; sourceTree = "<group>"; };
+		AEE1E7B81B2A459F0038B1DB /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = clock.wav; path = ../Cronometro/clock.wav; sourceTree = "<group>"; };
+		AEE1E7BA1B2A4B3B0038B1DB /* clock2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = clock2.wav; path = ../Cronometro/clock2.wav; sourceTree = "<group>"; };
+		AEE1E7BC1B2A4E940038B1DB /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = ../Cronometro/beep.mp3; sourceTree = "<group>"; };
+		AEE1E7C01B2A54FD0038B1DB /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fail.wav; path = ../Cronometro/fail.wav; sourceTree = "<group>"; };
+		AEE90AEA1B2B4B80008F3178 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEE90AEB1B2B4CB9008F3178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEE90AEC1B2B4D0B008F3178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AEEA4B8C1B1E556D0049051A /* FormmatterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormmatterHelper.h; sourceTree = "<group>"; };
 		AEEA4B8D1B1E556D0049051A /* FormmatterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormmatterHelper.m; sourceTree = "<group>"; };
 		AEEA4B8F1B1E73790049051A /* FeedUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedUserDefaults.h; sourceTree = "<group>"; };
@@ -98,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE1E7B51B2A16250038B1DB /* AudioToolbox.framework in Frameworks */,
 				AE7D0E441B1CD2DC0061C086 /* UIKit.framework in Frameworks */,
 				AE7D0E421B1CD2D20061C086 /* CoreGraphics.framework in Frameworks */,
 				AE7D0E401B1CD2C80061C086 /* Foundation.framework in Frameworks */,
@@ -131,6 +148,11 @@
 		AE558CD11B1D0B6F0050D778 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AEE1E7C01B2A54FD0038B1DB /* fail.wav */,
+				AEE1E7BC1B2A4E940038B1DB /* beep.mp3 */,
+				AEE1E7BA1B2A4B3B0038B1DB /* clock2.wav */,
+				AEE1E7B81B2A459F0038B1DB /* clock.wav */,
+				AEE1E7B61B2A25180038B1DB /* boathorn.wav */,
 				AE558CD21B1D0B6F0050D778 /* digital-7.ttf */,
 			);
 			path = Assets;
@@ -176,6 +198,7 @@
 				AE7C115F1B220B5300AECA7F /* HelpViewController.m */,
 				AEEA4B921B1E73810049051A /* Utilities */,
 				AE7D0E0A1B1CCBF80061C086 /* Supporting Files */,
+				AEE90AE81B2B4B7A008F3178 /* InfoPlist.strings */,
 			);
 			path = Cronometro;
 			sourceTree = "<group>";
@@ -210,6 +233,7 @@
 		AE7D0E361B1CD2510061C086 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEE1E7B41B2A16250038B1DB /* AudioToolbox.framework */,
 				AE7D0E431B1CD2DC0061C086 /* UIKit.framework */,
 				AE7D0E411B1CD2D20061C086 /* CoreGraphics.framework */,
 				AE7D0E3F1B1CD2C80061C086 /* Foundation.framework */,
@@ -330,11 +354,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE07DB11B2115F600EC6828 /* Localizable.strings in Resources */,
+				AEE90AE61B2B4B7A008F3178 /* InfoPlist.strings in Resources */,
+				AEE1E7B71B2A25180038B1DB /* boathorn.wav in Resources */,
+				AEE1E7BD1B2A4E940038B1DB /* beep.mp3 in Resources */,
+				AEE1E7BB1B2A4B3B0038B1DB /* clock2.wav in Resources */,
 				AEF076621B28EBBD004CCA65 /* iPhone.storyboard in Resources */,
 				AE7D0E161B1CCBF80061C086 /* Main.storyboard in Resources */,
 				AE7D0E1B1B1CCBF80061C086 /* LaunchScreen.xib in Resources */,
 				AE7D0E181B1CCBF80061C086 /* Images.xcassets in Resources */,
+				AEE1E7C11B2A54FD0038B1DB /* fail.wav in Resources */,
 				AE558CD31B1D0B6F0050D778 /* digital-7.ttf in Resources */,
+				AEE1E7B91B2A459F0038B1DB /* clock.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +474,16 @@
 				AEE07DB51B21160000EC6828 /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AEE90AE81B2B4B7A008F3178 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEE90AEA1B2B4B80008F3178 /* es */,
+				AEE90AEB1B2B4CB9008F3178 /* en */,
+				AEE90AEC1B2B4D0B008F3178 /* Base */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		AEF076601B28EBBD004CCA65 /* iPhone.storyboard */ = {

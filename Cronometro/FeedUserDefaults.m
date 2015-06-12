@@ -124,4 +124,49 @@
 }
 
 
++ (BOOL)colorIsOn {
+    BOOL value = [[NSUserDefaults standardUserDefaults] boolForKey:FEEDUSERDEFAULTS_COLORISON];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:value forKey:FEEDUSERDEFAULTS_COLORISON];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return  value;
+}
+
+
++ (void)setColorIsOn:(BOOL)colorIsOn {
+    [[NSUserDefaults standardUserDefaults] setBool:colorIsOn forKey:FEEDUSERDEFAULTS_COLORISON];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
++ (BOOL)animationIsOn {
+    BOOL value = [[NSUserDefaults standardUserDefaults] boolForKey:FEEDUSERDEFAULTS_ANIMATIONISON];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:value forKey:FEEDUSERDEFAULTS_ANIMATIONISON];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return  value;
+}
+
+
++ (void)setAnimationIsOn:(BOOL)animationIsOn {
+    [[NSUserDefaults standardUserDefaults] setBool:animationIsOn forKey:FEEDUSERDEFAULTS_ANIMATIONISON];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
++ (BOOL)audioIsOn {
+    BOOL value = [[NSUserDefaults standardUserDefaults] boolForKey:FEEDUSERDEFAULTS_AUDIOISON];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:value forKey:FEEDUSERDEFAULTS_AUDIOISON];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return  value;
+}
+
+
++ (void)setAudioIsOn:(BOOL)audioIsOn {
+    [[NSUserDefaults standardUserDefaults] setBool:audioIsOn forKey:FEEDUSERDEFAULTS_AUDIOISON];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
 @end

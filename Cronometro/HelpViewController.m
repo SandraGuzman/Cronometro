@@ -17,13 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     imagesSettings = [[NSArray alloc] initWithObjects:
-                      @"SettingsView",
-                      @"ServerView",
-                      @"QRCodeView",
-                      @"ClientView",
-                      @"ClientSuccess",
-                      @"ServerNewDevice",
-                      @"TimerView", nil];
+                      @"1Main",
+                      @"2Settings",
+                      @"3Server",
+                      @"4Client",
+                      @"5ClientSuccess",
+                      @"6ServerNewDevice",
+                      @"7General",
+                      @"8ServerMain",
+                      @"9ServerControls",
+                      @"10ClientMain", nil];
     
     labelSettings = [[NSArray alloc] initWithObjects:
                      NSLocalizedString(@"Label1", @""),
@@ -32,18 +35,19 @@
                      NSLocalizedString(@"Label4", @""),
                      NSLocalizedString(@"Label5", @""),
                      NSLocalizedString(@"Label6", @""),
-                     NSLocalizedString(@"Label7", @""),nil];
+                     NSLocalizedString(@"Label7", @""),
+                     NSLocalizedString(@"Label8", @""),
+                     NSLocalizedString(@"Label9", @""),
+                     NSLocalizedString(@"Label10", @""),nil];
     
     self.display.text = labelSettings[0];
-    self.slider.delegate = self;
-    [self.view addSubview:self.slider];
     int x = 0;
     
     for (int i=0; i < imagesSettings.count; i++) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(x, 0, self.slider.frame.size.width, self.slider.frame.size.height)];
         view.backgroundColor = [UIColor clearColor];
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame: CGRectMake(25, 0.5f, self.slider.frame.size.width - 50, self.slider.frame.size.height - 1)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame: CGRectMake(40, 5, self.slider.frame.size.width - 80, self.slider.frame.size.height - 10)];
         [imageView setImage: [UIImage imageNamed:imagesSettings[i]]];
         [view addSubview: imageView];
         

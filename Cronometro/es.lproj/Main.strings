@@ -9,7 +9,13 @@
 "9QL-NR-KPK.text" = ":";
 
 /* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "Ew3-lf-Vf8"; */
-"Ew3-lf-Vf8.normalTitle" = "Inicializar conexión";
+"Ew3-lf-Vf8.normalTitle" = "Inicializar servidor";
+
+/* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "TBT-HA-PMQ"; */
+"TBT-HA-PMQ.normalTitle" = "Conectar con el servidor";
+
+/* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "dJF-HM-4ml"; */
+"dJF-HM-4ml.normalTitle" = "Guardar";
 
 /* Class = "IBUIButton"; normalTitle = "Minimizar"; ObjectID = "Fsp-3n-NTP"; */
 "Fsp-3n-NTP.normalTitle" = "Minimizar";
@@ -32,6 +38,9 @@
 /* Class = "IBUISegmentedControl"; fUg-Qj-XcK.segmentTitles[1] = "Cliente"; ObjectID = "fUg-Qj-XcK"; */
 "fUg-Qj-XcK.segmentTitles[1]" = "Cliente";
 
+/* Class = "IBUISegmentedControl"; fUg-Qj-XcK.segmentTitles[1] = "Cliente"; ObjectID = "fUg-Qj-XcK"; */
+"fUg-Qj-XcK.segmentTitles[2]" = "General";
+
 /* Class = "IBUITextField"; placeholder = "00"; ObjectID = "iHf-OK-Nvb"; */
 "iHf-OK-Nvb.placeholder" = "00";
 
@@ -52,3 +61,15 @@
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "z83-qc-kGi"; */
 "z83-qc-kGi.text" = "Label";
+
+/* Class = "IBUILabel"; ObjectID = "5es-fJ-J42"; */
+"5es-fJ-J42.text" = "Activar cambio de color (Tiempo transcurrido):";
+
+/* Class = "IBUILabel"; ObjectID = "kWM-E0-mWm"; */
+"kWM-E0-mWm.text" = "Activar animación temporizador:";
+
+/* Class = "IBUILabel"; ObjectID = "00p-64-8St"; */
+"00p-64-8St.text" = "Activar reproducción de audio:";
+
+/* Class = "IBUILabel"; ObjectID = "NM6-dt-ayD"; */
+"NM6-dt-ayD.text" = "Configuraciones generales de diseño";

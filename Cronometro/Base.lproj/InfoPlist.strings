@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Cronometro
+
+  Created by Sandra Guzmán Bautista on 12/06/15.
+  Copyright (c) 2015 onikom. All rights reserved.
+*/
+
+CFBundleDisplayName = "Timer";

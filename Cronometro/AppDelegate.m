@@ -45,6 +45,9 @@
 }
 
 - (void)clearNSUserDefaults {
+    [FeedUserDefaults setAnimationIsOn:YES];
+    [FeedUserDefaults setColorIsOn:YES];
+    [FeedUserDefaults setAudioIsOn:YES];
     [FeedUserDefaults setIsConnected:NO];
     [FeedUserDefaults setIsServer:YES];
     [FeedUserDefaults setUrlServer:FEEDUSERDEFAULTS_URLSERVER];

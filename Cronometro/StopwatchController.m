@@ -19,14 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"fail" ofType:@"wav"];
+    ending=[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    ending.volume = 1.0f;
+    ending.delegate = self;
+    
+    NSString *pathClock = [[NSBundle mainBundle] pathForResource:@"clock2" ofType:@"wav"];
+    clock=[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathClock] error:NULL];
+    clock.volume = 1.0f;
+    clock.delegate = self;
+    
     currentFormatDate = TYPEDEFS_FULLTIME;
     self.displayTimer.text = TYPEDEFS_DEFAULTTIME;
     self.displayTimer.layer.shadowColor = [[UIColor yellowColor] CGColor];
-    self.displayTimer.layer.shadowRadius = 0.0f;
-    self.displayTimer.layer.shadowOpacity = 10.0f;
     [self.displayTimer setFont:[UIFont fontWithName:@"Digital-7" size:self.displayTimer.font.pointSize]];
-    
-    [self showControls];
     
     self.streamServer = [StreamServer sharedInstance];
     [self.streamServer setDelegate:self];
@@ -37,11 +43,11 @@
 
 - (void)showControls {
     if ([FeedUserDefaults isServer]) {
-        NSLog(@"TRACE: SERVER");
+        NSLog(@"TRACE: Server");
         self.buttonStart.hidden = FALSE;
         self.buttonRestart.hidden = FALSE;
     } else {
-        NSLog(@"TRACE: CLIENT");
+        NSLog(@"TRACE: Client");
         self.buttonStart.hidden = TRUE;
         self.buttonRestart.hidden = TRUE;
     }
@@ -54,23 +60,34 @@
     currentFormatDate = [FormmatterHelper getDateFormat:currentDate];
     self.displayTimer.text = [FormmatterHelper convertDateToString:currentDate withFormat:currentFormatDate];
     
-    NSLog(@"fecha : %@", self.displayTimer.text);
+    [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(updateTimer)
                                            userInfo:nil
                                             repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)updateTimer {
-    [self runGlowEffect];
     NSDate *myDate = [FormmatterHelper convertStringToDate:self.displayTimer.text withFormat:currentFormatDate];
     NSDate *correctDate = [NSDate dateWithTimeInterval:-1.0 sinceDate:myDate];
     NSString *format =  [FormmatterHelper getDateFormat:correctDate];
     
     self.displayTimer.text = [FormmatterHelper convertDateToString:correctDate withFormat:format];
     currentFormatDate = format;
-    [self runBackgroundEffectWithPercent:[currentDate timeIntervalSinceDate:correctDate]];
+    
+    if ([FeedUserDefaults audioIsOn]) {
+        [clock play];
+    }
+    
+    if ([FeedUserDefaults animationIsOn]) {
+        [self runGlowEffect];
+    }
+    
+    if ([FeedUserDefaults colorIsOn]) {
+        [self runBackgroundEffectWithPercent:[currentDate timeIntervalSinceDate:correctDate]];
+    }
     
     NSComparisonResult result = [correctDate compare: [FormmatterHelper convertStringToDate:TYPEDEFS_DEFAULTTIME withFormat:TYPEDEFS_TIMESS]];
     if(result == NSOrderedSame) {
@@ -120,7 +137,7 @@
                               delay:0.0
                             options:UIViewAnimationOptionCurveLinear
                          animations:^ {
-                             self.mainView.backgroundColor = [UIColor greenColor];
+                             self.mainView.backgroundColor = [UIColor colorWithRed:238 green:201 blue:0 alpha:1.0f];
                              self.displayTimer.textColor = [UIColor blackColor];
                              self.displayTimer.layer.shadowColor = [[UIColor whiteColor] CGColor];
                          } completion:nil];
@@ -146,6 +163,9 @@
     if (![[FeedUserDefaults timer] isEqualToString:FEEDUSERDEFAULTS_TIMER]) {
         [self.streamServer sendRestart];
         [self resetVariables];
+        if ([FeedUserDefaults audioIsOn]) {
+            [ending play];
+        }
     }
 }
 

@@ -19,20 +19,36 @@
     NSMutableArray *logs;
 }
 
-@property (strong, nonatomic) IBOutlet DACircularProgressView *largeProgressView;
-@property (weak, nonatomic) IBOutlet UIImageView *qrCodeImage;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *optionsSettings;
+
+// Server
+
+@property (weak, nonatomic) IBOutlet UIView *serverView;
+@property (weak, nonatomic) IBOutlet UIImageView *qrCodeImage;
 @property (weak, nonatomic) IBOutlet UITextField *hours;
 @property (weak, nonatomic) IBOutlet UITextField *minutes;
 @property (weak, nonatomic) IBOutlet UITextField *seconds;
-@property (weak, nonatomic) IBOutlet UIView *serverView;
-@property (weak, nonatomic) IBOutlet UIView *clientView;
-@property (weak, nonatomic) IBOutlet UILabel *displayStatusClient;
-@property (strong, nonatomic) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UITableView *logServer;
 
-- (IBAction)startConnection:(id)sender;
+// Client
+
+@property (weak, nonatomic) IBOutlet UIView *clientView;
+@property (strong, nonatomic) IBOutlet DACircularProgressView *largeProgressView;
+@property (weak, nonatomic) IBOutlet UILabel *displayStatusClient;
+@property (strong, nonatomic) NSTimer *timer;
+
+// General
+
+@property (weak, nonatomic) IBOutlet UIView *generalView;
+@property (weak, nonatomic) IBOutlet UISwitch *colorSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *animationSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *audioSwitch;
+
+
 - (IBAction)closePopup:(id)sender;
 - (IBAction)segmentedControlChanged:(id)sender;
+- (IBAction)saveSettings:(id)sender;
+- (IBAction)connectToServer:(id)sender;
+- (IBAction)startServer:(id)sender;
 
 @end

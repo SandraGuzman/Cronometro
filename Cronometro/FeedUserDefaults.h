@@ -14,6 +14,9 @@
 #define FEEDUSERDEFAULTS_URLSERVER @"urlServer"
 #define FEEDUSERDEFAULTS_ISCONNECTED @"isConnected"
 #define FEEDUSERDEFAULTS_LOG @"logData"
+#define FEEDUSERDEFAULTS_COLORISON @"colorIsOn"
+#define FEEDUSERDEFAULTS_ANIMATIONISON @"animationIsOn"
+#define FEEDUSERDEFAULTS_AUDIOISON @"audioIsOn"
 
 @interface FeedUserDefaults : NSObject
 
@@ -34,5 +37,14 @@
 
 + (NSArray *)logData;
 + (void)setLogData:(NSArray *)logData;
+
++ (BOOL)colorIsOn;
++ (void)setColorIsOn:(BOOL)colorIsOn;
+
++ (BOOL)animationIsOn;
++ (void)setAnimationIsOn:(BOOL)animationIsOn;
+
++ (BOOL)audioIsOn;
++ (void)setAudioIsOn:(BOOL)audioIsOn;
 
 @end

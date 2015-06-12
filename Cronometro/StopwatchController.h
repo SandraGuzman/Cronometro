@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "StreamClient.h"
 #import "StreamServer.h"
 
-@interface StopwatchController : UIViewController <StreamServerDelegate, StreamClientDelegate> {
+@interface StopwatchController : UIViewController <StreamServerDelegate, StreamClientDelegate, AVAudioPlayerDelegate> {
+    AVAudioPlayer* ending;
+    AVAudioPlayer* clock;
     NSTimer *timer;
     NSString *currentFormatDate;
     NSDate *currentDate;

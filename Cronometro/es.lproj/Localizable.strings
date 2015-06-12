@@ -12,7 +12,7 @@
 "Start"             = "Iniciar";
 "Alert"             = "Aviso";
 "Ok"                = "Cerrar";
-"PleaseConfigure"   = "Porfavor configurar su conexión";
+"PleaseConfigure"   = "Porfavor configurar su conexión como Servidor o Cliente";
 
 // Settings
 
@@ -27,9 +27,12 @@
 // Help
 
 "Label1" = "Conectar dispositivos a la misma red y dar clic en el botón configuraciones";
-"Label2" = "Conectar el primer dispositivo como servidor dar clic en Inicializar conexión";
+"Label2" = "Conectar el primer dispositivo como servidor dar clic en Inicializar servidor";
 "Label3" = "Se mostrará QRCode y estatus de la conexión";
-"Label4" = "Los demás dispositivos se configurarán como clientes, clic en Inicializar conexión y escanear el QRCode del servidor";
+"Label4" = "Los demás dispositivos se configurarán como clientes, clic en Conectar con el servidor y escanear el QRCode del servidor";
 "Label5" = "Mostrará el estatus de la conexión";
 "Label6" = "EL servidor mostrará las conexiones existentes";
-"Label7" = "Solo el servidor mostrará los botones de inicio, pausar y reiniciar";
+"Label7" = "La pantalla general permite configurar opciones de visualización";
+"Label8" = "El servidor mostrará los controles de reproducción";
+"Label9" = "El servidor habilitará las opciones de iniciar, pausar y reiniciar";
+"Label10"= "La vista del cliente solo mostrará el tiempo";

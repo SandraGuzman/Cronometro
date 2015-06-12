@@ -20,113 +20,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.qrCodeImage.layer.borderColor = [UIColor darkGrayColor].CGColor;
     topController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    
-    logs = [[NSMutableArray alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(changeDataTableLog:)
                                                  name:TYPEDEFS_NOTIFICATIONNEWLOG object:nil];
+    [self updateViewServer];
+    [self updateViewClient];
+    [self updateViewGeneral];
+    [self segmentedControlChanged:nil];
+}
+
+
+#pragma mark - Custom view Methods
+
+- (void)updateViewServer {
+    self.qrCodeImage.layer.borderColor = [UIColor darkGrayColor].CGColor;
     
+    if ([FeedUserDefaults isServer]) {
+        self.optionsSettings.selectedSegmentIndex = 0;
+        [self drawQRCodeIpServer:[FeedUserDefaults urlServer]];
+        
+        logs = [[NSMutableArray alloc] init];
+        for (NSString *log in  [FeedUserDefaults logData]) {
+            [logs addObject:log];
+        }
+        [self.logServer reloadData];
+    }
+}
+
+- (void)updateViewClient {
     self.largeProgressView.roundedCorners = YES;
     self.largeProgressView.thicknessRatio = .1f;
     [self drawStatusConnectedClient:[FeedUserDefaults isConnected]];
     
-    if (![[FeedUserDefaults urlServer] isEqualToString:FEEDUSERDEFAULTS_URLSERVER]) {
-        [self drawQRCodeIpServer:[FeedUserDefaults urlServer]];
-    }
-    
-    if ([FeedUserDefaults isServer]) {
-        self.optionsSettings.selectedSegmentIndex = 0;
-        
-        for (NSString *log in  [FeedUserDefaults logData]) {
-            [logs addObject:log];
-        }
-        
-        [self.logServer reloadData];
-    } else {
+    if (![FeedUserDefaults isServer])
         self.optionsSettings.selectedSegmentIndex = 1;
-    }
-    
-    [self segmentedControlChanged:self.optionsSettings];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (IBAction)startConnection:(id)sender {
-    if (self.optionsSettings.selectedSegmentIndex == 0) {
-        [FeedUserDefaults setIsServer:YES];
-        [self startServer];
-    } else {
-        [FeedUserDefaults setIsServer:NO];
-        [self startClient];
-    }
-}
-
-- (IBAction)closePopup:(id)sender {
-    [(StopwatchController *)topController showControls];
-    [FeedUserDefaults setLogData:logs];
-    [[NSNotificationCenter defaultCenter] removeObserver:TYPEDEFS_NOTIFICATIONSTATUS];
-    [[NSNotificationCenter defaultCenter] removeObserver:TYPEDEFS_NOTIFICATIONNEWLOG];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)segmentedControlChanged:(id)sender {
-    UISegmentedControl *segmentedC = (UISegmentedControl *)sender;
-
-    if (segmentedC.selectedSegmentIndex == 0) {
-        self.serverView.hidden = FALSE;
-        self.clientView.hidden = TRUE;
-    } else {
-        self.clientView.hidden = FALSE;
-        self.serverView.hidden = TRUE;
-    }
-}
-
-- (void)startServer {
-    NSString *timer = [FormmatterHelper getDateStringWithHour:_hours.text andMinutes:_minutes.text andSeconds:_seconds.text];
-    NSDate *myDate = [FormmatterHelper convertStringToDate:timer withFormat:TYPEDEFS_FULLTIME];
-    
-    if (myDate == nil) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Alert", @"")
-                                    message:NSLocalizedString(@"PleaseFormat", @"")
-                                   delegate:nil
-                          cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-                          otherButtonTitles:nil] show];
-    } else {
-        [FeedUserDefaults setTimer:timer];
-        [FeedUserDefaults setTimerTemporary:timer];
-        
-        NSString *ipAddress = [[StreamServer sharedInstance] startNetworkListening];
-        [FeedUserDefaults setUrlServer:ipAddress];
-        [self drawQRCodeIpServer:ipAddress];
-    }
-}
-
-- (void)startClient {
-    ZBarReaderViewController *reader = [ZBarReaderViewController new];
-    reader.readerDelegate = self;
-    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
-    
-    ZBarImageScanner *scanner = reader.scanner;
-    [scanner setSymbology: ZBAR_I25
-                   config: ZBAR_CFG_ENABLE
-                       to: 0];
-    
-    [self presentViewController:reader animated:YES completion:nil];
-}
-
-#pragma mark - Custom view Methods
-
-- (void)progressChange {
-    CGFloat progress = self.largeProgressView.progress + 0.01f;
-    [self.largeProgressView setProgress:progress animated:YES];
-    
-    if (self.largeProgressView.progress >= 1.0f && [self.timer isValid]) {
-        [self.largeProgressView setProgress:0.f animated:YES];
-    }
+- (void)updateViewGeneral {
+    self.colorSwitch.on = [FeedUserDefaults colorIsOn];
+    self.audioSwitch.on = [FeedUserDefaults audioIsOn];
+    self.animationSwitch.on = [FeedUserDefaults animationIsOn];
 }
 
 - (void)showLabelStatusConnection:(NSNotification *)status {
@@ -163,6 +97,15 @@
     }
 }
 
+- (void)progressChange {
+    CGFloat progress = self.largeProgressView.progress + 0.01f;
+    [self.largeProgressView setProgress:progress animated:YES];
+    
+    if (self.largeProgressView.progress >= 1.0f && [self.timer isValid]) {
+        [self.largeProgressView setProgress:0.f animated:YES];
+    }
+}
+
 - (void)drawQRCodeIpServer:(NSString *)ipServer {
     NSError *error = nil;
     ZXMultiFormatWriter *writer = [ZXMultiFormatWriter writer];
@@ -176,6 +119,74 @@
     } else {
         NSString *errorMessage = [error localizedDescription];
         NSLog(@"ERROR: %@", errorMessage);
+    }
+}
+
+
+#pragma mark - IBAction Methods
+
+- (IBAction)startServer:(id)sender {
+    NSString *timer = [FormmatterHelper getDateStringWithHour:_hours.text andMinutes:_minutes.text andSeconds:_seconds.text];
+    NSDate *myDate = [FormmatterHelper convertStringToDate:timer withFormat:TYPEDEFS_FULLTIME];
+    
+    if (myDate == nil) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Alert", @"")
+                                    message:NSLocalizedString(@"PleaseFormat", @"")
+                                   delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                          otherButtonTitles:nil] show];
+    } else {
+        [FeedUserDefaults setIsServer:YES];
+        [FeedUserDefaults setTimer:timer];
+        [FeedUserDefaults setTimerTemporary:timer];
+        
+        NSString *ipAddress = [[StreamServer sharedInstance] startNetworkListening];
+        [FeedUserDefaults setUrlServer:ipAddress];
+        [self drawQRCodeIpServer:ipAddress];
+    }
+}
+
+- (IBAction)connectToServer:(id)sender {
+    [FeedUserDefaults setIsServer:NO];
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    reader.readerDelegate = self;
+    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+    
+    ZBarImageScanner *scanner = reader.scanner;
+    [scanner setSymbology: ZBAR_I25
+                   config: ZBAR_CFG_ENABLE
+                       to: 0];
+    
+    [self presentViewController:reader animated:YES completion:nil];
+}
+
+- (IBAction)saveSettings:(id)sender {
+    [FeedUserDefaults setColorIsOn:self.colorSwitch.isOn];
+    [FeedUserDefaults setAnimationIsOn:self.animationSwitch.isOn];
+    [FeedUserDefaults setAudioIsOn:self.audioSwitch.isOn];
+}
+
+- (IBAction)closePopup:(id)sender {
+    [(StopwatchController *)topController showControls];
+    [FeedUserDefaults setLogData:logs];
+    [[NSNotificationCenter defaultCenter] removeObserver:TYPEDEFS_NOTIFICATIONSTATUS];
+    [[NSNotificationCenter defaultCenter] removeObserver:TYPEDEFS_NOTIFICATIONNEWLOG];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - UISegmentControl Delegate Methods
+
+- (IBAction)segmentedControlChanged:(id)sender {
+    if (self.optionsSettings.selectedSegmentIndex == 0) {
+        self.serverView.hidden = FALSE;
+        self.clientView.hidden = TRUE;
+    } else if (self.optionsSettings.selectedSegmentIndex == 1) {
+        self.clientView.hidden = FALSE;
+        self.serverView.hidden = TRUE;
+    } else {
+        self.serverView.hidden = TRUE;
+        self.clientView.hidden = TRUE;
     }
 }
 

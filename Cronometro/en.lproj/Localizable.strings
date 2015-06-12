@@ -12,7 +12,7 @@
 "Start"             = "Start";
 "Alert"             = "Alert";
 "Ok"                = "Close";
-"PleaseConfigure"   = "Please configure your connection";
+"PleaseConfigure"   = "Please configure your connection either Server or Client";
 
 // Settings
 
@@ -25,10 +25,13 @@
 
 // Help
 
-"Label1" = "Connecting devices to the same network and click on the button configurations";
-"Label2" = "Connect the first device as a server, click on Startup Connection";
+"Label1" = "Connecting devices to the same network and click on the button settings";
+"Label2" = "Connect the first device as a server, click on Server startup";
 "Label3" = "Show QRCode - Connectivity Status ";
-"Label4" = "Connect device as a client, click on Startup Connection and Scan QR Code Server with WebCam";
+"Label4" = "Connect multiple clients simultaneously to server, click on Connect to server and Scan QR Code Server with webcam";
 "Label5" = "Show Connectivity Status";
 "Label6" = "Log server display current connections ";
-"Label7" = "Only server display start, done and pause buttons";
+"Label7" = "Setting properties for custom controls";
+"Label8" = "Server look like this";
+"Label9" = "Server enable start, done and pause buttons";
+"Label10"= "Client look like this";

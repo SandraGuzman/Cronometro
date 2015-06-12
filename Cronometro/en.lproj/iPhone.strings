@@ -26,8 +26,17 @@
 /* Class = "IBUISegmentedControl"; rVP-Al-cTf.segmentTitles[1] = "Client"; ObjectID = "rVP-Al-cTf"; */
 "rVP-Al-cTf.segmentTitles[1]" = "Client";
 
-/* Class = "IBUIButton"; normalTitle = "Startup Connection"; ObjectID = "uh5-Xm-YaP"; */
-"uh5-Xm-YaP.normalTitle" = "Startup Connection";
+/* Class = "IBUISegmentedControl"; rVP-Al-cTf.segmentTitles[1] = "Cliente"; ObjectID = "rVP-Al-cTf"; */
+"rVP-Al-cTf.segmentTitles[2]" = "General";
+
+/* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "uh5-Xm-YaP"; */
+"uh5-Xm-YaP.normalTitle" = "Server startup";
+
+/* Class = "IBUIButton"; normalTitle = "Conectar con el servidor"; ObjectID = "g1L-wI-7lv"; */
+"g1L-wI-7lv.normalTitle" = "Connect to server";
+
+/* Class = "IBUIButton"; normalTitle = "Guardar"; ObjectID = "pRw-5m-NQE"; */
+"pRw-5m-NQE.normalTitle" = "Save";
 
 /* Class = "IBUILabel"; text = "Not connected"; ObjectID = "wGe-7s-qBw"; */
 "wGe-7s-qBw.text" = "Not connected";
@@ -37,3 +46,15 @@
 
 /* Class = "IBUITextField"; text = "01"; ObjectID = "yS8-gu-Imq"; */
 "yS8-gu-Imq.text" = "01";
+
+/* Class = "IBUILabel"; ObjectID = "LGK-0e-H2y"; */
+"LGK-0e-H2y.text" = "Activate the color change (Elapsed time):";
+
+/* Class = "IBUILabel"; ObjectID = "xus-aB-ALP"; */
+"xus-aB-ALP.text" = "Trigger an animation effect:";
+
+/* Class = "IBUILabel"; ObjectID = "MmM-zY-BHg"; */
+"MmM-zY-BHg.text" = "Enable audio:";
+
+/* Class = "IBUILabel"; ObjectID = "juN-VB-pe5"; */
+"juN-VB-pe5.text" = "General design settings";

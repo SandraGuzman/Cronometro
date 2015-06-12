@@ -607,7 +607,7 @@ AVSessionPresetForUIVideoQuality (UIImagePickerControllerQualityType quality)
 - (void) setCameraCaptureMode: (UIImagePickerControllerCameraCaptureMode) mode
 {
     NSAssert2(mode == UIImagePickerControllerCameraCaptureModeVideo,
-              @"attempt to set unsupported value (%ld)"
+              @"attempt to set unsupported value (%d)"
               @" for %@ property", mode, @"cameraCaptureMode");
 }
 
