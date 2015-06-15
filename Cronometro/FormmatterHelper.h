@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <arpa/inet.h>
 
 @interface FormmatterHelper : NSObject
 
@@ -16,5 +17,7 @@
 + (NSString *)getDateFormat:(NSDate *)date;
 + (NSDateFormatter *)initializeNSDateFormat:(NSString *)format;
 + (int)convertDateToSeconds:(NSDate *)date;
++ (BOOL)isValidIpAddress:(NSString *)ipAddress;
++ (NSArray *)getStringComponents:(NSString *)string withToken:(NSString *)token;
 
 @end

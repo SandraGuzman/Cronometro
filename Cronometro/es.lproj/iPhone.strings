@@ -9,7 +9,7 @@
 "KNX-nn-beF.normalTitle" = "Iniciar";
 
 /* Class = "IBUITextField"; text = "10"; ObjectID = "O1d-iT-Jxv"; */
-"O1d-iT-Jxv.text" = "10";
+"O1d-iT-Jxv.text" = "00";
 
 /* Class = "IBUILabel"; text = ":"; ObjectID = "Ora-Sw-wiJ"; */
 "Ora-Sw-wiJ.text" = ":";
@@ -45,7 +45,7 @@
 "xAM-02-A3f.normalTitle" = "Reinciar";
 
 /* Class = "IBUITextField"; text = "01"; ObjectID = "yS8-gu-Imq"; */
-"yS8-gu-Imq.text" = "01";
+"yS8-gu-Imq.text" = "00";
 
 /* Class = "IBUILabel"; ObjectID = "LGK-0e-H2y"; */
 "LGK-0e-H2y.text" = "Activar cambio de color (Tiempo transcurrido):";

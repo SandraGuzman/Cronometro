@@ -24,7 +24,7 @@
     ending.volume = 1.0f;
     ending.delegate = self;
     
-    NSString *pathClock = [[NSBundle mainBundle] pathForResource:@"clock2" ofType:@"wav"];
+    NSString *pathClock = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"mp3"];
     clock=[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathClock] error:NULL];
     clock.volume = 1.0f;
     clock.delegate = self;

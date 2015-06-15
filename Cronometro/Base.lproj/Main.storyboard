@@ -240,7 +240,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="01" borderStyle="roundedRect" placeholder="00" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHf-OK-Nvb">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" placeholder="00" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHf-OK-Nvb">
                                         <rect key="frame" x="70" y="296" width="56" height="30"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -249,7 +249,7 @@
                                             <outlet property="delegate" destination="QTl-Ht-t9m" id="STY-hQ-X7d"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" placeholder="00" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcM-TM-L7u">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" placeholder="00" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcM-TM-L7u">
                                         <rect key="frame" x="144" y="298" width="56" height="30"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -310,9 +310,6 @@
                                             <outlet property="delegate" destination="QTl-Ht-t9m" id="d9k-HV-Abg"/>
                                         </connections>
                                     </tableView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timer" translatesAutoresizingMaskIntoConstraints="NO" id="bnm-9v-YwT">
-                                        <rect key="frame" x="31" y="299" width="30" height="24"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew3-lf-Vf8">
                                         <rect key="frame" x="168" y="363" width="283" height="33"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -328,6 +325,13 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="startServer:" destination="QTl-Ht-t9m" eventType="touchUpInside" id="DWX-Jq-Uvp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tib-17-A4c">
+                                        <rect key="frame" x="20" y="296" width="30" height="30"/>
+                                        <state key="normal" image="SaveTime"/>
+                                        <connections>
+                                            <action selector="updateTimer:" destination="QTl-Ht-t9m" eventType="touchUpInside" id="eb4-vR-cNi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -440,7 +444,7 @@
         <image name="CloseButton" width="60" height="60"/>
         <image name="GradientTop" width="1024" height="768"/>
         <image name="Help" width="25" height="25"/>
+        <image name="SaveTime" width="50" height="50"/>
         <image name="Settings" width="25" height="25"/>
-        <image name="Timer" width="30" height="24"/>
     </resources>
 </document>

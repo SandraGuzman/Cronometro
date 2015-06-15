@@ -45,13 +45,13 @@
 "iHf-OK-Nvb.placeholder" = "00";
 
 /* Class = "IBUITextField"; text = "01"; ObjectID = "iHf-OK-Nvb"; */
-"iHf-OK-Nvb.text" = "01";
+"iHf-OK-Nvb.text" = "00";
 
 /* Class = "IBUITextField"; placeholder = "00"; ObjectID = "rcM-TM-L7u"; */
 "rcM-TM-L7u.placeholder" = "00";
 
 /* Class = "IBUITextField"; text = "10"; ObjectID = "rcM-TM-L7u"; */
-"rcM-TM-L7u.text" = "10";
+"rcM-TM-L7u.text" = "00";
 
 /* Class = "IBUILabel"; text = "Tiempo temporizador"; ObjectID = "tNX-mf-f8G"; */
 "tNX-mf-f8G.text" = "Timer";

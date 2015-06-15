@@ -50,5 +50,6 @@
 - (IBAction)saveSettings:(id)sender;
 - (IBAction)connectToServer:(id)sender;
 - (IBAction)startServer:(id)sender;
+- (IBAction)updateTimer:(id)sender;
 
 @end

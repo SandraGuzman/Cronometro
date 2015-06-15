@@ -80,5 +80,18 @@
     return seconds;
 }
 
++ (BOOL)isValidIpAddress:(NSString *)ipAddress {
+    struct sockaddr_in sa;
+    int result = inet_pton(AF_INET, [ipAddress UTF8String], &(sa.sin_addr));
+    return result != 0;
+}
+
++ (NSArray *)getStringComponents:(NSString *)string withToken:(NSString *)token {
+    NSArray* components = [[string stringByTrimmingCharactersInSet:
+                            [NSCharacterSet whitespaceAndNewlineCharacterSet]]
+                           componentsSeparatedByString:token];
+    
+    return components;
+}
 
 @end

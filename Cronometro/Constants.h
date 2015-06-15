@@ -12,7 +12,7 @@
 #define TYPEDEFS_PORT 905
 #define TYPEDEFS_NOTIFICATIONSTATUS @"StatusConnection"
 #define TYPEDEFS_NOTIFICATIONNEWLOG @"NewLog"
-#define TYPEDEFS_FULLTIME @"hh:mm:ss"
+#define TYPEDEFS_FULLTIME @"HH:mm:ss"
 #define TYPEDEFS_TIMEMMSS @"mm:ss"
 #define TYPEDEFS_TIMESS @"ss"
 #define TYPEDEFS_DEFAULTTIME @"00"

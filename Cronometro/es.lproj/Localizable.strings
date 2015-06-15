@@ -12,7 +12,8 @@
 "Start"             = "Iniciar";
 "Alert"             = "Aviso";
 "Ok"                = "Cerrar";
-"PleaseConfigure"   = "Porfavor configurar su conexión como Servidor o Cliente";
+"PleaseConfigure"   = "Configurar su conexión como Servidor o Cliente";
+"CheckConnection"   = "Revise su conexión wifi y vuelva a intentar";
 
 // Settings
 
@@ -22,6 +23,7 @@
 "SuccessfulLog"        = "Conexión exitosa";
 "NewDevice"            = "Nuevo dispositivo conectado";
 "PleaseFormat"         = "Formato incorrecto de fecha \n Horas-Minutos-Segundos";
+"TimeSuccessful"       = "Tiempo actualizado";
 
 
 // Help

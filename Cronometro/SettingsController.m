@@ -38,13 +38,20 @@
     
     if ([FeedUserDefaults isServer]) {
         self.optionsSettings.selectedSegmentIndex = 0;
-        [self drawQRCodeIpServer:[FeedUserDefaults urlServer]];
         
         logs = [[NSMutableArray alloc] init];
         for (NSString *log in  [FeedUserDefaults logData]) {
             [logs addObject:log];
         }
         [self.logServer reloadData];
+        
+        if (![[FeedUserDefaults urlServer] isEqualToString:FEEDUSERDEFAULTS_URLSERVER]) {
+            [self drawQRCodeIpServer:[FeedUserDefaults urlServer]];
+            NSArray *time = [FormmatterHelper getStringComponents:[FeedUserDefaults timerTemporary] withToken:@":"];
+            self.hours.text = time[0];
+            self.minutes.text = time[1];
+            self.seconds.text = time[2];
+        }
     }
 }
 
@@ -141,8 +148,38 @@
         [FeedUserDefaults setTimerTemporary:timer];
         
         NSString *ipAddress = [[StreamServer sharedInstance] startNetworkListening];
-        [FeedUserDefaults setUrlServer:ipAddress];
-        [self drawQRCodeIpServer:ipAddress];
+        
+        if ([FormmatterHelper isValidIpAddress:ipAddress]) {
+            [FeedUserDefaults setUrlServer:ipAddress];
+            [self drawQRCodeIpServer:ipAddress];
+        } else {
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Alert", @"")
+                                        message:NSLocalizedString(@"CheckConnection", @"")
+                                       delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                              otherButtonTitles:nil] show];
+        }
+    }
+}
+
+- (IBAction)updateTimer:(id)sender {
+    NSString *timer = [FormmatterHelper getDateStringWithHour:_hours.text andMinutes:_minutes.text andSeconds:_seconds.text];
+    NSDate *myDate = [FormmatterHelper convertStringToDate:timer withFormat:TYPEDEFS_FULLTIME];
+    
+    if (myDate == nil) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Alert", @"")
+                                    message:NSLocalizedString(@"PleaseFormat", @"")
+                                   delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                          otherButtonTitles:nil] show];
+    } else {
+        [FeedUserDefaults setTimer:timer];
+        [FeedUserDefaults setTimerTemporary:timer];
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Alert", @"")
+                                    message:NSLocalizedString(@"TimeSuccessful", @"")
+                                   delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                          otherButtonTitles:nil] show];
     }
 }
 

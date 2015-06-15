@@ -13,6 +13,7 @@
 "Alert"             = "Alert";
 "Ok"                = "Close";
 "PleaseConfigure"   = "Please configure your connection either Server or Client";
+"CheckConnection"   = "Check Wi-Fi connection (Retry)";
 
 // Settings
 
@@ -22,6 +23,7 @@
 "SuccessfulLog"        = "Successful server connection";
 "NewDevice"            = "New device connected";
 "PleaseFormat"         = "Incorrect date format \n Hours-Minutes-Seconds";
+"TimeSuccessful"       = "Update successful";
 
 // Help
 
