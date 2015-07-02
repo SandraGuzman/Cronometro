@@ -213,30 +213,39 @@ static NSMutableArray *arrOutputStream;
     [outputStream write:[data1 bytes] maxLength:[data1 length]];
 }
 
+- (void)sendSettings {
+    NSLog(@"TRACE: send settings");
+    NSData *data = [[NSData alloc] initWithData:[[@"settings" stringByAppendingFormat:@"%d|%d|%d", [FeedUserDefaults colorIsOn], [FeedUserDefaults animationIsOn], [FeedUserDefaults audioIsOn]] dataUsingEncoding:NSASCIIStringEncoding]];
+    
+    for (id outputStream in arrOutputStream) {
+        [(NSOutputStream *)outputStream write:[data bytes] maxLength:[data length]];
+    }
+}
+
 - (void)sendStartMessage {
     NSLog(@"TRACE: send data time - %@", [FeedUserDefaults timer]);
-    NSData *data1 = [[NSData alloc] initWithData:[[FeedUserDefaults timer] dataUsingEncoding:NSASCIIStringEncoding]];
+    NSData *data = [[NSData alloc] initWithData:[[FeedUserDefaults timer] dataUsingEncoding:NSASCIIStringEncoding]];
     
     for(id outputStream in arrOutputStream) {
-        [(NSOutputStream *)outputStream write:[data1 bytes] maxLength:[data1 length]];
+        [(NSOutputStream *)outputStream write:[data bytes] maxLength:[data length]];
     }
 }
 
 - (void)sendRestart {
     NSLog(@"TRACE: stop watch");
-    NSData *data1 = [[NSData alloc] initWithData:[@"stop" dataUsingEncoding:NSASCIIStringEncoding]];
+    NSData *data = [[NSData alloc] initWithData:[@"stop" dataUsingEncoding:NSASCIIStringEncoding]];
     
     for(id outputStream in arrOutputStream) {
-        [(NSOutputStream *)outputStream write:[data1 bytes] maxLength:[data1 length]];
+        [(NSOutputStream *)outputStream write:[data bytes] maxLength:[data length]];
     }
 }
 
 - (void)sendPause {
     NSLog(@"TRACE: pause watch");
-    NSData *data1 = [[NSData alloc] initWithData:[@"pause" dataUsingEncoding:NSASCIIStringEncoding]];
+    NSData *data = [[NSData alloc] initWithData:[@"pause" dataUsingEncoding:NSASCIIStringEncoding]];
     
     for(id outputStream in arrOutputStream) {
-        [(NSOutputStream *)outputStream write:[data1 bytes] maxLength:[data1 length]];
+        [(NSOutputStream *)outputStream write:[data bytes] maxLength:[data length]];
     }
 }
 

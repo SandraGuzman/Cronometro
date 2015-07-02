@@ -12,7 +12,7 @@
 "Ew3-lf-Vf8.normalTitle" = "Server startup";
 
 /* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "TBT-HA-PMQ"; */
-"TBT-HA-PMQ.normalTitle" = "Connect to server";
+"TBT-HA-PMQ.normalTitle" = "Scan QR Code Server";
 
 /* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "dJF-HM-4ml"; */
 "dJF-HM-4ml.normalTitle" = "Save";
@@ -73,3 +73,9 @@
 
 /* Class = "IBUILabel"; ObjectID = "NM6-dt-ayD"; */
 "NM6-dt-ayD.text" = "General design settings";
+
+"Eoc-GV-MJu.text" = "hours";
+
+"pwg-Ox-Jcd.text" = "minutes";
+
+"fOb-ol-Z77.text" = "seconds";

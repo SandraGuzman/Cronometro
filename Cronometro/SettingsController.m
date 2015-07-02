@@ -24,6 +24,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(changeDataTableLog:)
                                                  name:TYPEDEFS_NOTIFICATIONNEWLOG object:nil];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
     [self updateViewServer];
     [self updateViewClient];
     [self updateViewGeneral];
@@ -163,6 +170,7 @@
 }
 
 - (IBAction)updateTimer:(id)sender {
+    [[self view] endEditing:YES];
     NSString *timer = [FormmatterHelper getDateStringWithHour:_hours.text andMinutes:_minutes.text andSeconds:_seconds.text];
     NSDate *myDate = [FormmatterHelper convertStringToDate:timer withFormat:TYPEDEFS_FULLTIME];
     
@@ -177,7 +185,7 @@
         [FeedUserDefaults setTimerTemporary:timer];
         [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Alert", @"")
                                     message:NSLocalizedString(@"TimeSuccessful", @"")
-                                   delegate:nil
+                                   delegate:self
                           cancelButtonTitle:NSLocalizedString(@"Ok", @"")
                           otherButtonTitles:nil] show];
     }
@@ -201,6 +209,8 @@
     [FeedUserDefaults setColorIsOn:self.colorSwitch.isOn];
     [FeedUserDefaults setAnimationIsOn:self.animationSwitch.isOn];
     [FeedUserDefaults setAudioIsOn:self.audioSwitch.isOn];
+    
+    [[StreamServer sharedInstance] sendSettings];
 }
 
 - (IBAction)closePopup:(id)sender {
@@ -215,6 +225,7 @@
 #pragma mark - UISegmentControl Delegate Methods
 
 - (IBAction)segmentedControlChanged:(id)sender {
+    [[self view] endEditing:YES];
     if (self.optionsSettings.selectedSegmentIndex == 0) {
         self.serverView.hidden = FALSE;
         self.clientView.hidden = TRUE;
@@ -271,9 +282,16 @@
         [nextResponder becomeFirstResponder];
     } else {
         [textField resignFirstResponder];
+        if (textField.tag == 4) {
+            [self updateTimer:nil];
+        }
     }
     
     return NO;
+}
+
+- (void)dismissKeyboard {
+    [[self view] endEditing:YES];
 }
 
 

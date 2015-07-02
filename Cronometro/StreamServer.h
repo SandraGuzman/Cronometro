@@ -34,5 +34,6 @@
 - (void)sendStartMessage;
 - (void)sendRestart;
 - (void)sendPause;
+- (void)sendSettings;
 
 @end

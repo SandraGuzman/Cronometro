@@ -33,7 +33,7 @@
 "uh5-Xm-YaP.normalTitle" = "Inicializar servidor";
 
 /* Class = "IBUIButton"; normalTitle = "Conectar con el servidor"; ObjectID = "g1L-wI-7lv"; */
-"g1L-wI-7lv.normalTitle" = "Conectar con el servidor";
+"g1L-wI-7lv.normalTitle" = "Escanear código servidor";
 
 /* Class = "IBUIButton"; normalTitle = "Guardar"; ObjectID = "pRw-5m-NQE"; */
 "pRw-5m-NQE.normalTitle" = "Guardar";
@@ -58,3 +58,11 @@
 
 /* Class = "IBUILabel"; ObjectID = "juN-VB-pe5"; */
 "juN-VB-pe5.text" = "Configuraciones generales de diseño";
+
+"LXY-tP-2hc.text" = "horas";
+
+"XhC-gr-iVN.text" = "minutos";
+
+"4kz-IZ-DXj.text" = "segundos";
+
+"8JF-NN-WnQ.normalTitle" = "Cerrar";

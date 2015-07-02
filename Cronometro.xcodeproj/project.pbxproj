@@ -504,8 +504,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hugo Cruz Mateos (4QH8M43876)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hugo Cruz Mateos (4QH8M43876)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hugo Cruz Mateos (X2G9EYMJ4Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hugo Cruz Mateos (X2G9EYMJ4Z)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -525,7 +525,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "06cb407e-386e-46a6-8e45-a29c2350bdeb";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -548,8 +548,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hugo Cruz Mateos (4QH8M43876)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hugo Cruz Mateos (4QH8M43876)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hugo Cruz Mateos (X2G9EYMJ4Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hugo Cruz Mateos (X2G9EYMJ4Z)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -562,7 +562,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "06cb407e-386e-46a6-8e45-a29c2350bdeb";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -574,11 +574,11 @@
 			baseConfigurationReference = 6CE4E5F6CC7F79F07698CCB5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hugo Cruz Mateos (4QH8M43876)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hugo Cruz Mateos (X2G9EYMJ4Z)";
 				INFOPLIST_FILE = "$(SRCROOT)/Cronometro/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Cronometro;
-				PROVISIONING_PROFILE = "06cb407e-386e-46a6-8e45-a29c2350bdeb";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -588,11 +588,11 @@
 			baseConfigurationReference = B38F39C692850070CE084C32 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hugo Cruz Mateos (4QH8M43876)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hugo Cruz Mateos (X2G9EYMJ4Z)";
 				INFOPLIST_FILE = "$(SRCROOT)/Cronometro/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Cronometro;
-				PROVISIONING_PROFILE = "06cb407e-386e-46a6-8e45-a29c2350bdeb";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -33,7 +33,7 @@
 "uh5-Xm-YaP.normalTitle" = "Server startup";
 
 /* Class = "IBUIButton"; normalTitle = "Conectar con el servidor"; ObjectID = "g1L-wI-7lv"; */
-"g1L-wI-7lv.normalTitle" = "Connect to server";
+"g1L-wI-7lv.normalTitle" = "Scan QR Code Server";
 
 /* Class = "IBUIButton"; normalTitle = "Guardar"; ObjectID = "pRw-5m-NQE"; */
 "pRw-5m-NQE.normalTitle" = "Save";
@@ -58,3 +58,11 @@
 
 /* Class = "IBUILabel"; ObjectID = "juN-VB-pe5"; */
 "juN-VB-pe5.text" = "General design settings";
+
+"LXY-tP-2hc.text" = "hours";
+
+"XhC-gr-iVN.text" = "minutes";
+
+"4kz-IZ-DXj.text" = "seconds";
+
+"8JF-NN-WnQ.normalTitle" = "Close";

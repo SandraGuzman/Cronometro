@@ -115,6 +115,14 @@
     flagRed = 0;
 }
 
+- (void)updateSettingsWithData:(NSString *)data {
+    NSArray *array = [FormmatterHelper getStringComponents:data withToken:@"|"];
+    
+    [FeedUserDefaults setColorIsOn:(BOOL)array[0]];
+    [FeedUserDefaults setAnimationIsOn:(BOOL)array[1]];
+    [FeedUserDefaults setAudioIsOn:(BOOL)array[2]];
+}
+
 
 #pragma mark - Animation Methods
 
@@ -204,12 +212,16 @@
     
     if ([message rangeOfString:@"Server"].location == NSNotFound) {
         if ([message rangeOfString:@"stop"].location == NSNotFound &&
-            [message rangeOfString:@"pause"].location == NSNotFound) {
+            [message rangeOfString:@"pause"].location == NSNotFound &&
+            [message rangeOfString:@"settings"].location == NSNotFound) {
             [self executeTimerController:message];
-        } else if ([message rangeOfString:NSLocalizedString(@"pause", @"")].location == NSNotFound) {
+        } else if ([message rangeOfString:@"pause"].location == NSNotFound &&
+                   [message rangeOfString:@"settings"].location == NSNotFound) {
             [self resetVariables];
-        } else {
+        } else if ([message rangeOfString:@"settings"].location == NSNotFound) {
             [self stopTimerController];
+        } else {
+            [self updateSettingsWithData:message];
         }
     }
 }

@@ -12,7 +12,7 @@
 "Ew3-lf-Vf8.normalTitle" = "Inicializar servidor";
 
 /* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "TBT-HA-PMQ"; */
-"TBT-HA-PMQ.normalTitle" = "Conectar con el servidor";
+"TBT-HA-PMQ.normalTitle" = "Escanear código servidor";
 
 /* Class = "IBUIButton"; normalTitle = "Inicializar conexión"; ObjectID = "dJF-HM-4ml"; */
 "dJF-HM-4ml.normalTitle" = "Guardar";
@@ -73,3 +73,9 @@
 
 /* Class = "IBUILabel"; ObjectID = "NM6-dt-ayD"; */
 "NM6-dt-ayD.text" = "Configuraciones generales de diseño";
+
+"Eoc-GV-MJu.text" = "horas";
+
+"pwg-Ox-Jcd.text" = "minutos";
+
+"fOb-ol-Z77.text" = "segundos";
