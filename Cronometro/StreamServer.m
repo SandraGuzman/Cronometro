@@ -215,7 +215,7 @@ static NSMutableArray *arrOutputStream;
 
 - (void)sendSettings {
     NSLog(@"TRACE: send settings");
-    NSData *data = [[NSData alloc] initWithData:[[@"settings" stringByAppendingFormat:@"%d|%d|%d", [FeedUserDefaults colorIsOn], [FeedUserDefaults animationIsOn], [FeedUserDefaults audioIsOn]] dataUsingEncoding:NSASCIIStringEncoding]];
+    NSData *data = [[NSData alloc] initWithData:[[@"settings" stringByAppendingFormat:@"|%d|%d|%d", [FeedUserDefaults colorIsOn], [FeedUserDefaults animationIsOn], [FeedUserDefaults audioIsOn]] dataUsingEncoding:NSASCIIStringEncoding]];
     
     for (id outputStream in arrOutputStream) {
         [(NSOutputStream *)outputStream write:[data bytes] maxLength:[data length]];

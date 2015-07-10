@@ -116,11 +116,15 @@
 }
 
 - (void)updateSettingsWithData:(NSString *)data {
+    NSLog(@"TRACE: Entra a update");
     NSArray *array = [FormmatterHelper getStringComponents:data withToken:@"|"];
+    BOOL one = (BOOL)array[1];
+    BOOL two = (BOOL)array[2];
+    BOOL three = (BOOL)array[3];
     
-    [FeedUserDefaults setColorIsOn:(BOOL)array[0]];
-    [FeedUserDefaults setAnimationIsOn:(BOOL)array[1]];
-    [FeedUserDefaults setAudioIsOn:(BOOL)array[2]];
+    [FeedUserDefaults setColorIsOn:one];
+    [FeedUserDefaults setAnimationIsOn:two];
+    [FeedUserDefaults setAudioIsOn:three];
 }
 
 
